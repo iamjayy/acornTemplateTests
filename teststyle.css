@@ -1,0 +1,660 @@
+:root {
+  --grey: rgb(163, 163, 163);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  transition: 250ms;
+  z-index: 2;
+}
+
+/* 
+  .nav-links {
+    background-color: #000;
+    position: absolute;
+    color: white;
+    right: 0;
+    top: 5vh;
+    width: 60%;
+    height: 75vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: menu_animation 500ms ease-in-out;
+  }
+  
+  .show-navlinks {
+    display: flex;
+  }
+  */
+
+header ul li {
+  list-style: none;
+  margin: 20px 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+header ul li button {
+  text-align: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: var(--grey);
+
+  transition: 250ms;
+}
+
+header ul li a:hover {
+  color: var(--blue-dark);
+}
+
+@keyframes menu_animation {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.sticky {
+  background: #831a3d;
+  box-shadow: 6x 6px 20px rgba(0, 0, 0, 0.123);
+  backdrop-filter: blur(20px);
+}
+
+.sticky a {
+  color: grey;
+}
+
+.sticky .logo {
+  color: inherit;
+}
+
+.sticky li a:hover {
+  color: var(--blue-dark);
+}
+
+.landingContent {
+  position: relative;
+  width: 735px;
+  height: 78px;
+  left: 1485px;
+  top: -120px;
+}
+
+.section2content {
+  position: relative;
+  width: 735px;
+  height: 150px;
+  left: 350px;
+  top: -95px;
+}
+
+.section2content p {
+  font-family: "Sofia Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+.card1 h1 {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 72px;
+  padding-left: 12px;
+}
+
+.card1 h4 {
+  font-family: "Sofia Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.card2 h1 {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.section3content {
+  position: relative;
+  width: 644px;
+  height: 52px;
+  left: 335px;
+  top: -95px;
+}
+
+.section3content p {
+  font-family: "Sofia Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+.card3 h1 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+}
+
+.buttons {
+  width: 200px;
+  margin: 0 auto;
+  display: inline;
+}
+
+.get-started {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  display: inline;
+  background: none;
+  color: white;
+  border: 2px white solid;
+}
+
+.learn-more {
+  width: 200px;
+  height: 50px;
+  border: none;
+  background: none;
+  color: white;
+  margin: 0 auto;
+  display: inline;
+}
+
+.landing {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url(/assets/images/large/section-1.png);
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section2image {
+  background: url(/assets/images/large/section-2.png);
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.section3image {
+  background: url(/assets/images/large/section-3.png);
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.member {
+  margin-top: 20px;
+  border: none;
+  transition: 250ms;
+  background: none;
+  color: white;
+}
+
+.acornClub {
+  margin-top: 20px;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 250ms;
+  background: #831a3d;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.loginButton {
+  margin-top: 20px;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 250ms;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn2 {
+  margin-top: 20px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 250ms;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.hamburger-on {
+  background: url(/assets/images/hamburger.png);
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.hamburger-off {
+  padding: 9px;
+  background: url(/assets/images/close.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.title {
+  color: #831a3d;
+  font-family: "Playfair Display";
+  font-weight: 800;
+}
+
+.box {
+  display: flex;
+}
+
+.club {
+  padding-bottom: 10px;
+}
+
+.stairSafe {
+  background: #f9f4f5;
+  padding-top: 25px;
+}
+
+.smallContent {
+  margin-left: 40px;
+  position: relative;
+  bottom: 35px;
+}
+
+.smallContent img {
+  float: left;
+}
+
+.man-phone {
+  position: relative;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  top: -35px;
+}
+
+#man-phone {
+  top: 100px;
+}
+
+.mainContent {
+  padding-top: 45px;
+  padding-bottom: 25px;
+}
+
+.mainContent p {
+  font-family: "Sofia Sans";
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.content3 {
+  padding-top: 35px;
+  column-gap: 6rem;
+  padding-bottom: 15px;
+}
+
+.tablet img {
+  max-width: 400px;
+  max-height: 473px;
+}
+
+.tablet {
+  float: left;
+  position: relative;
+  left: -60px;
+  padding-top: 50px;
+}
+
+#phoneCircleTitle {
+  justify-content: center;
+  text-align: center;
+}
+
+#phoneCircleTitle h1 {
+  color: #831a3d;
+}
+
+#phoneCircleTitle p {
+  color: #2c2c2c;
+  font-family: "Sofia Sans";
+}
+
+.stairSafeTitle h1 {
+  color: #831a3d;
+  display: flex;
+  align-items: left;
+  margin-top: 15px;
+}
+
+.stairInfoLeft div p {
+  padding-top: 25px;
+}
+
+.stairInfoRight div p {
+  padding-top: 25px;
+}
+
+.stairInfoLeft {
+  position: relative;
+  width: 400px;
+  height: 22px;
+  left: -55px;
+  top: 131px;
+
+  font-family: "Sofia Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 45px;
+
+  text-align: center;
+
+  color: #2c2c2c;
+
+  opacity: 0.85;
+}
+
+.stairInfoRight {
+  position: relative;
+  width: 300px;
+  height: 22px;
+  right: -65px;
+  top: 131px;
+
+  font-family: "Sofia Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 45px;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #2c2c2c;
+
+  opacity: 0.85;
+}
+
+.stairSafeTitle p {
+  font-size: 14px;
+  font-family: "Sofia Sans";
+  font-weight: 400;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.stairSafeTitle h4 {
+  font-family: "Sofia Sans";
+}
+
+footer {
+  color: white;
+  background-color: #831a3d;
+  text-align: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.footerContent {
+  padding-top: 25px;
+}
+
+/* TABLET */
+@media screen and (max-width: 1050px) {
+  .landing {
+    background-image: url("/assets/images/small/section-1.png");
+  }
+  .section2image {
+    background-image: url("/assets/images/large/section-2.png");
+  }
+  .section3image {
+    background-image: url("/assets/images/large/section-3.png");
+    background-size: cover;
+    background-position-x: 80%;
+  }
+
+  /* header and landing page */
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: unset;
+    width: auto;
+    height: auto;
+    background: none;
+    margin-left: 130px;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    transition: 250ms;
+    z-index: 2;
+    max-width: fit-content;
+  }
+  header img {
+    max-width: 50%;
+    width: auto;
+  }
+
+  .show-navlinks {
+    display: flex;
+  }
+
+  header ul li {
+    list-style: none;
+    margin: 20px 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .card1 h1 {
+    position: relative;
+    left: -10px;
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 80px;
+    display: inline;
+    color: #ffffff;
+  }
+  .landingContent {
+    position: relative;
+    width: 850x;
+    height: 65px;
+    left: 80px;
+    top: 206px;
+    display: inline;
+  }
+
+  /* section 2 */
+
+  .section2content {
+    position: relative;
+    width: 800px;
+    height: 52px;
+    left: 30px;
+    top: 191px;
+  }
+
+  /* section 3 */
+  .section3content {
+    position: relative;
+    width: 684px;
+    height: 52px;
+    left: 30px;
+    top: 201px;
+  }
+
+  .section3content h1 {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+
+    color: #ffffff;
+  }
+
+  .sticky a {
+    color: white;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: unset;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+
+  header ul {
+    display: flex;
+  }
+
+  header ul li {
+    margin: 0;
+  }
+
+  header ul li a {
+    padding: 0;
+    margin: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* .mainContent {
+      display: grid;
+    }
+  
+    .section4Content {
+      margin-top: 300px;
+    }
+  
+    #safetyFeature {
+      width: 500px;
+      position: relative;
+      left: 200px;
+      font-family: "Playfair Display";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 50px;
+      line-height: 60px;
+      text-align: center;
+      color: #831a3d;
+    }
+  
+    #safetyFeatureTitleChild {
+      width: 500px;
+      position: relative;
+      left: 200px;
+      text-align: center;
+    }
+  
+    .man-phone {
+      position: relative;
+      width: 303.68px;
+      height: 400px;
+      left: 280px;
+      top: -950px;
+    }
+  
+    .smallContent {
+      position: relative;
+      margin-top: -380px;
+    } */
+
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+  }
+  /* section5 */
+  #stairSafe {
+    display: grid;
+  }
+}
