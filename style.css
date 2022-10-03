@@ -722,7 +722,9 @@ footer a {
   }
 
   .info ul {
+    display: flex;
     margin-bottom: -50px;
+    padding: 5px;
   }
 
   .info ul li {
@@ -747,6 +749,11 @@ footer a {
     position: relative;
     left: -190px;
     top: 55px;
+  }
+
+  .details {
+    position: relative;
+    left: -90px;
   }
   footer {
     padding: 1rem;
