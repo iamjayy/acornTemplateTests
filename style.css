@@ -219,7 +219,7 @@ header .navigation li a:hover {
 .loginButton {
   margin-top: 20px;
   border: none;
-  padding: 8px 12px;
+  padding: 5px 48px;
   cursor: pointer;
   transition: 250ms;
   background: none;
@@ -266,7 +266,7 @@ p {
 }
 
 .learn-more:hover {
-  letter-spacing: 6px;
+  letter-spacing: 4px;
 }
 
 .banner {
@@ -287,6 +287,7 @@ p {
   height: 108px;
   left: 565px;
   top: -20px;
+  margin: 15px;
 }
 
 .banner #section1 h1 {
@@ -349,6 +350,7 @@ p {
   height: 108px;
   left: -595px;
   top: -20px;
+  margin: 15px;
 }
 
 .banner #section2 h1 {
@@ -396,6 +398,7 @@ p {
   left: -335px;
   top: -103px;
   max-width: 1000px;
+  margin: 15px;
 }
 
 .banner #section3 h1 {
@@ -435,13 +438,13 @@ p {
 .btn {
   display: inline-block;
   background: none;
-  border: 2px solid white;
+  border: 3px solid white;
   color: white;
   cursor: pointer;
 
   font-size: 1em;
   color: #fff;
-  padding: 10px 30px;
+  padding: 21px 59px;
   margin-top: 20px;
   text-transform: capitalize;
   text-decoration: none;
@@ -577,9 +580,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-gap: 2rem;
-  width: 100vw;
-  position: relative;
-  left: -125px;
+  margin: 0px auto;
 }
 .info .title {
   grid-column: 1 / 4;
@@ -646,6 +647,8 @@ footer a {
   border-radius: 100px;
 }
 
+/* Media Query for Mobile Devices */
+
 @media (max-width: 500px) {
   .tb-hidden {
     display: none !important;
@@ -661,6 +664,53 @@ footer a {
     display: -ms-flexbox !important;
     display: flex !important;
   }
+
+  #banner {
+    background-image: url(/assets/images/large/section-1.png);
+  }
+  #banner2 {
+    background-image: url(/assets/images/large/section-2.png);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+  }
+  #banner3 {
+    background-image: url(/assets/images/large/section-3.png);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    background-position-x: -800px;
+
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  header.sticky {
+    background: #831a3d;
+    padding: 10px 8px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    box-shadow: 0 5x 20px rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  header .logo img {
+    height: auto;
+    max-width: 75%;
+  }
   .mb-hidden {
     display: none;
   }
@@ -668,15 +718,69 @@ footer a {
     padding: 1rem;
     border-bottom: var(--border);
   }
+  header .navigation {
+    position: absolute;
+    left: 300px;
+  }
+
+  header .navigation #disabled {
+    display: none;
+  }
   header {
     padding: 1rem;
   }
-  header div:last-child {
-    grid-template-columns: 1fr;
+
+  #section1 {
+    text-align: left;
+    position: relative;
+    width: 500px;
+    height: 108px;
+    left: -4px;
+    top: 66px;
   }
-  header div:last-child a {
-    padding: 0 2rem;
+  #section2 {
+    text-align: left;
+    position: relative;
+    width: 500px;
+    height: 108px;
+    left: -3px;
+    top: 66px;
   }
+  #section3 {
+    text-align: left;
+    position: relative;
+    width: 500px;
+    height: 108px;
+    left: -3px;
+    top: 190px;
+  }
+
+  .banner .content a {
+    font-family: "Sofia Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+  }
+
+  .banner #section1 h1 {
+    font-size: 45px;
+    line-height: 48px;
+  }
+  .banner #section2 h1 {
+    font-size: 37px;
+  }
+  .banner #section3 h1 {
+    font-size: 38px;
+  }
+
+  .banner .content h4 {
+    font-size: 20px;
+  }
+
   .safety {
     padding-top: -200px;
     grid-gap: 1rem;
@@ -719,6 +823,7 @@ footer a {
     color: #2c2c2c;
     opacity: 0.85;
     justify-content: center;
+    margin-bottom: -65px;
   }
 
   .info ul {
@@ -755,6 +860,7 @@ footer a {
     position: relative;
     left: -90px;
   }
+
   footer {
     padding: 1rem;
   }
@@ -783,6 +889,81 @@ footer a {
   }
   .safety .club-btn {
     margin: auto;
+    margin-bottom: -80px;
+  }
+  .details {
+    grid-template-columns: 1fr;
+    text-align: center;
+    max-width: 95vw;
+    margin: auto;
+    display: contents;
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode @media (max-width: 1050px) {
+  .tb-hidden {
+    display: none !important;
+  }
+  .tb-block {
+    display: flex !important;
+  }
+}
+
+/*Main page
+@media (max-width: 1050px) {
+  .content {
+    max-width: 100vw;
+  }
+  header .navigation {
+    position: relative;
+    right: 400px;
+  }
+  .safety {
+    grid-template-columns: 1fr;
+    text-align: center;
+    max-width: 95vw;
+    margin: auto;
+  }
+  .safety img {
+    margin: auto;
+  }
+  .safety > div:nth-child(2) {
+    grid-row: 2;
+  }
+  .safety .title {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .safety .club-btn {
+    margin: auto;
+  }
+  .info {
+    grid-template-columns: 1fr;
+    width: 100vw;
+    position: relative;
+    left: -53px;
+  }
+
+  .info .title {
+    grid-column: 1/3;
+  }
+  .info ul {
+    row-gap: 4rem;
+    font-family: "Sofia Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2c2c2c;
+    opacity: 0.85;
+  }
+  .info picture {
+    grid-row: 3;
+    grid-column: 1/3;
+    position: relative;
+    bottom: -55px;
   }
   .details {
     grid-template-columns: 1fr;
@@ -791,3 +972,6 @@ footer a {
     margin: auto;
   }
 }
+
+/* Media Query for Laptops and Desktops */
+/* Media Query for Large screens */
