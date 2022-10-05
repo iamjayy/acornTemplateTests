@@ -33,6 +33,7 @@ html {
   /*  padding: 0 1rem;*/
   margin: 0 auto;
 }
+
 /*
 * {
   scroll-padding-top: 80px;
@@ -160,6 +161,34 @@ li {
 }
 
 /* END GENERAL CSS */
+/* SCROLL DOWN BUTTON  */
+.scrollButton {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-decoration: none;
+  color: #ffffff;
+  padding-top: 60px;
+}
+
+.scrollButton span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+/* SCROLL DOWN BUTTON  */
 
 /* Header */
 header {
@@ -178,8 +207,8 @@ header {
 header.sticky {
   background: #831a3d;
   padding: 10px 100px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 0px;
   box-shadow: 0 5x 20px rgba(0, 0, 0, 0.5);
   color: white;
 }
@@ -439,13 +468,15 @@ p {
   color: #fff;
 }
 
+.sectionButtons {
+  padding-top: 35px;
+}
 .banner .content p {
   font-size: 1em;
   color: #fff;
 }
 
 .btn {
-  display: inline-block;
   background: none;
   border: 3px solid white;
   color: white;
@@ -658,16 +689,13 @@ footer a {
 
 /* Media Query for Mobile Devices */
 
-@media (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .tb-hidden {
     display: none !important;
   }
   .tb-block {
     display: flex !important;
   }
-}
-
-@media (max-width: 500px) {
   .mb-block {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -682,6 +710,10 @@ footer a {
         rgba(0, 0, 0, 0.65) 100%
       ),
       url(/assets/images/large/section-1.png);
+    max-width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   #banner2 {
     background-image: linear-gradient(
@@ -690,17 +722,10 @@ footer a {
         rgba(0, 0, 0, 0.8)
       ),
       url(/assets/images/large/section-2.png);
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    margin: auto;
-
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    max-width: 100%;
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   #banner3 {
     background-image: linear-gradient(
@@ -709,18 +734,10 @@ footer a {
         rgba(0, 0, 0, 0.8)
       ),
       url(/assets/images/large/section-3.png);
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    margin: auto;
-    background-position-x: -800px;
-
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    max-width: 100%;
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   header.sticky {
@@ -806,11 +823,20 @@ footer a {
     font-size: 20px;
   }
 
+  #content {
+    max-width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-top: 50px;
+  }
+
   .safety {
     padding-top: -200px;
     grid-gap: 1rem;
     position: relative;
-    left: -125px;
+    left: -200px;
     top: -50px;
   }
 
@@ -823,17 +849,8 @@ footer a {
   .info .title {
     grid-column: 1;
     position: relative;
-    width: 500px;
-    left: -185px;
+    left: -169px;
     top: -50px;
-    font-family: "Playfair Display";
-    font-style: normal;
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 37px;
-    text-align: center;
-
-    color: #831a3d;
   }
 
   .info p {
@@ -865,7 +882,7 @@ footer a {
     font-family: "Sofia Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 21px;
     line-height: 30px;
     text-align: center;
     letter-spacing: 0.02em;
@@ -1031,3 +1048,4 @@ footer a {
 
 /* Media Query for Laptops and Desktops */
 /* Media Query for Large screens */
+/* Scroll behavior */

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./style.css" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -22,17 +23,20 @@
 
     <section class="banner" id="banner">
       <div class="content" id="section1">
-        <h1>Stay Safe. Stay Secure.</h1>
+        <h1>Remote Stairlift Monitoring</h1>
         <h4>Stay in control with StairSafe from Acorn Stairlifts</h4>
-        <p id="section1p">
+        <p>
           Acorn is proud to launch the ground-breaking StairSafe monitoring
           system for your Acorn stairlift. Simply put, this one-of-a-kind app
           will monitor the activity of your stairlift and allow you peace of
           mind as you or a loved one uses the stairlift.
         </p>
-        <a href="#" class="btn">get started</a>
-        <a href="#" class="learn-more">Learn More</a>
+        <div class="sectionButtons">
+          <a href="#" class="btn">get started</a>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
       </div>
+      <a href="#banner2" class="scrollButton"><span></span> Scroll Down </a>
     </section>
 
     <section class="banner" id="banner2">
@@ -44,9 +48,12 @@
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </p>
-        <a href="#" class="btn">get started</a>
-        <a href="#" class="learn-more">Learn More</a>
+        <div class="sectionButtons">
+          <a href="#" class="btn">get started</a>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
       </div>
+      <a href="#banner3" class="scrollButton"><span></span> Scroll Down </a>
     </section>
 
     <section class="banner" id="banner3">
@@ -58,9 +65,12 @@
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </p>
-        <a href="#" class="btn">get started</a>
-        <a href="#" class="learn-more">Learn More</a>
+        <div class="sectionButtons">
+          <a href="#" class="btn">get started</a>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
       </div>
+      <a href="#content" class="scrollButton"><span></span> Scroll Down </a>
     </section>
 
     <article class="content" id="content">
@@ -143,7 +153,7 @@
             <a class="club-btn" href="/"> Go to Acorn Club </a>
           </article>
         </div>
-        
+
         <div>
           <picture class="tb-hidden">
             <source
@@ -206,37 +216,36 @@
         </div>
       </section>
 
-        <section class="info">
-          <div class="title" id="title">
-            <h3 class="red">StairSafe Detects Critical Information</h3>
-            <p>
-              StairSafe can detect the following information and send updates to
-              you or a loved one via text message.
-            </p>
-          </div>
-          <ul class="leftInfo">
-            <li>Activated Safety Edges</li>
-            <li>Stairlift Rail Position</li>
-            <li>Lift Switch ON/OFF</li>
-            <li>Minor and Major Error Codes</li>
-            <li>Sleep Mode Activation</li>
-          </ul>
-          <ul class="rightInfo">
-            <li>Service Required</li>
-            <li>Irregular Use</li>
-            <li>Battery Charge</li>
-            <li>Lift Move</li>
-            <li>Lack of Charge</li>
-          </ul>
-          <picture>
-            <source
-              media="(max-width:680px)"
-              srcset="/assets/images/small/phone-circle.png"
-            />
-            <img src="/assets/images/large/phone-circle.png" alt="Flowers" />
-          </picture>
-        </section>
-      </div>
+      <section class="info">
+        <div class="title" id="title">
+          <h3 class="red">StairSafe Detects Critical Information</h3>
+          <p>
+            StairSafe can detect the following information and send updates to
+            you or a loved one via text message.
+          </p>
+        </div>
+        <ul class="leftInfo">
+          <li>Activated Safety Edges</li>
+          <li>Stairlift Rail Position</li>
+          <li>Lift Switch ON/OFF</li>
+          <li>Minor and Major Error Codes</li>
+          <li>Sleep Mode Activation</li>
+        </ul>
+        <ul class="rightInfo">
+          <li>Service Required</li>
+          <li>Irregular Use</li>
+          <li>Battery Charge</li>
+          <li>Lift Move</li>
+          <li>Lack of Charge</li>
+        </ul>
+        <picture>
+          <source
+            media="(max-width:680px)"
+            srcset="/assets/images/small/phone-circle.png"
+          />
+          <img src="/assets/images/large/phone-circle.png" alt="Flowers" />
+        </picture>
+      </section>
 
       <section class="details">
         <picture class="tb-hidden">
