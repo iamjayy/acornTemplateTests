@@ -138,6 +138,7 @@ h7 {
   font-family: var(--second);
   font-weight: 700;
 }
+
 h8 {
   font-size: var(--sm);
   font-family: var(--second);
@@ -192,6 +193,39 @@ ul {
 }
 
 /* navbar */
+header {
+  position: fixed;
+  width: 100%;
+}
+
+header.sticky {
+  background: #831a3d;
+  padding-top: 105px;
+}
+
+header .nav-links {
+  display: flex;
+  position: relative;
+}
+
+header .nav-links li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+header .nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
+
+header.sticky .nav-links li a {
+  color: white;
+}
+
+header .nav-links li a:hover {
+  color: #ff0157;
+}
 .navbar {
   position: fixed;
   top: 0;
@@ -279,16 +313,23 @@ ul {
 .header-content {
   margin-bottom: 150px;
   color: #ffffff;
-  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .header-content h1 {
-  font-size: 8vmin;
+  font-size: 5vmin;
 }
 
-.header-content h4 {
-  font-size: 4vmin;
-  margin-bottom: 10px;
+.subtitle {
+  font-size: 2vmin;
+  font-family: "Sofia Sans";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px;
+  margin-bottom: -20px;
 }
 
 .header-content p {
@@ -297,13 +338,23 @@ ul {
 
 .btn {
   background: none;
-  border: 2px solid white;
+  border: 4px solid white;
   color: white;
   cursor: pointer;
   color: #fff;
   padding: 8px 15px;
   text-transform: capitalize;
-  text-decoration: none;
+  font-size: 2vmin;
+  margin-right: 50px;
+}
+
+.learn-more {
+  background: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 15px;
+  text-transform: capitalize;
+  font-size: 2vmin;
 }
 
 section {
@@ -314,9 +365,7 @@ section {
 .title {
   text-align: center;
   font-size: 4vmin;
-  color: #831a3d;
   font-family: "Playfair Display";
-  font-style: normal;
   font-weight: 800;
 }
 
@@ -464,9 +513,88 @@ footer a {
     display: flex !important;
   }
 
+  .hero1 {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 45%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("../assets/images/large/section-1.png");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+  }
+
+  .hero2 {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("../assets/images/large/section-2.png");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+  }
+
+  .hero3 {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("../assets/images/large/section-3.png");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    background-position-x: -950px !important;
+  }
+
+  .header-content h1 {
+    font-size: 9vmin;
+  }
+
+  .subtitle {
+    font-size: 4vmin;
+    font-family: "Sofia Sans";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+    margin-bottom: -20px;
+  }
+
+  .btn {
+    font-size: 4vmin;
+    margin-right: 20px;
+    border: 3px solid white;
+    padding: 15px 30px;
+  }
+
+  .learn-more {
+    font-size: 4vmin;
+    margin-right: auto;
+  }
+
   .info {
     grid-template-columns: 1fr;
     row-gap: 1rem;
+    display: inline-block;
+    text-align: center;
   }
   .info .title {
     grid-column: 1;
@@ -476,13 +604,17 @@ footer a {
     font-family: "Sofia Sans";
     letter-spacing: 0.02em;
     color: #2c2c2c;
-    margin-bottom: -65px;
+    margin-bottom: -40px;
   }
 
   .info ul {
     display: flex;
     margin-bottom: -50px;
-    padding: 5px;
+    padding: 65px;
+  }
+
+  .info #leftInfo {
+    margin-bottom: -110px;
   }
 
   .info ul li {
@@ -513,17 +645,73 @@ footer a {
   .tb-block {
     display: flex !important;
   }
+  .hero1 {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0) 30%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("../assets/images/large/section-1.png");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+  }
+
+  .hero2 {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("../assets/images/large/section-2.png");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+  }
+
+  .hero3 {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("../assets/images/large/section-3.png");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+  }
+
+  .header-content h1 {
+    font-size: 9vmin;
+  }
+
   .content {
     max-width: 100vw;
   }
 
-  #landing-content1 {
-    position: absolute;
+  .subtitle {
+    font-size: 3vmin;
+    line-height: 35px;
   }
+
   .safety {
     grid-template-columns: 1fr;
     text-align: center;
-    max-width: 95vw;
     margin: auto;
   }
   .safety img {
@@ -560,7 +748,18 @@ footer a {
   .details {
     grid-template-columns: 1fr;
     text-align: center;
-    max-width: 95vw;
     margin: auto;
+  }
+}
+
+@media (min-width: 1281px) {
+  #landing-content1 {
+    position: absolute;
+    right: 205px;
+    bottom: 450px;
+  }
+
+  #landing-p {
+    max-width: fit-content;
   }
 }
