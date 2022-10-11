@@ -200,7 +200,7 @@ header {
 
 header.sticky {
   background: #831a3d;
-  padding-top: 105px;
+  padding-top: 107px;
 }
 
 header .nav-links {
@@ -311,41 +311,32 @@ header .nav-links li a:hover {
 }
 
 .header-content {
-  margin-bottom: 150px;
   color: #ffffff;
-  margin-right: auto;
-  margin-left: auto;
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.header-content h1 {
-  font-size: 5vmin;
-}
-
-.subtitle {
-  font-size: 2vmin;
-  font-family: "Sofia Sans";
-  font-style: normal;
-  font-weight: 600;
-  line-height: 50px;
-  margin-bottom: -20px;
-}
-
 .header-content p {
-  padding-bottom: 25px;
+  padding-bottom: 10px;
+}
+
+.landing-buttons {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
 }
 
 .btn {
   background: none;
-  border: 4px solid white;
+  border: 3px solid white;
   color: white;
   cursor: pointer;
-  color: #fff;
   padding: 8px 15px;
   text-transform: capitalize;
-  font-size: 2vmin;
-  margin-right: 50px;
+  font-size: 21px;
+  margin-right: 29px;
+  white-space: nowrap;
+  margin-bottom: 10px;
 }
 
 .learn-more {
@@ -354,19 +345,13 @@ header .nav-links li a:hover {
   cursor: pointer;
   padding: 8px 15px;
   text-transform: capitalize;
-  font-size: 2vmin;
+  font-size: 21px;
+  white-space: nowrap;
 }
 
 section {
   width: 80%;
   margin: 80px auto;
-}
-
-.title {
-  text-align: center;
-  font-size: 4vmin;
-  font-family: "Playfair Display";
-  font-weight: 800;
 }
 
 #content {
@@ -497,7 +482,7 @@ footer a {
   }
   header .logo img {
     height: auto;
-    max-width: 75%;
+    max-width: 100%;
   }
 
   .tb-hidden {
@@ -565,29 +550,8 @@ footer a {
     background-position-x: -950px !important;
   }
 
-  .header-content h1 {
-    font-size: 9vmin;
-  }
-
-  .subtitle {
-    font-size: 4vmin;
-    font-family: "Sofia Sans";
-    font-style: normal;
-    font-weight: 600;
-    line-height: 35px;
-    margin-bottom: -20px;
-  }
-
-  .btn {
-    font-size: 4vmin;
-    margin-right: 20px;
-    border: 3px solid white;
-    padding: 15px 30px;
-  }
-
-  .learn-more {
-    font-size: 4vmin;
-    margin-right: auto;
+  #landing-content1 {
+    position: absolute;
   }
 
   .info {
@@ -645,13 +609,14 @@ footer a {
   .tb-block {
     display: flex !important;
   }
+
   .hero1 {
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0) 50%,
-        rgba(0, 0, 0, 0) 30%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 35%,
         rgba(0, 0, 0, 0.9) 100%
       ),
       url("../assets/images/large/section-1.png");
@@ -669,7 +634,7 @@ footer a {
         to bottom,
         rgba(0, 0, 0, 0) 40%,
         rgba(0, 0, 0, 0) 40%,
-        rgba(0, 0, 0, 0.9) 100%
+        rgba(0, 0, 0, 0.9) 90%
       ),
       url("../assets/images/large/section-2.png");
     background-position: bottom;
@@ -684,9 +649,9 @@ footer a {
     height: 100vh;
     background-image: linear-gradient(
         to bottom,
+        rgba(0, 0, 0, 0) 30%,
         rgba(0, 0, 0, 0) 40%,
-        rgba(0, 0, 0, 0) 40%,
-        rgba(0, 0, 0, 0.9) 100%
+        rgba(0, 0, 0, 0.9) 85%
       ),
       url("../assets/images/large/section-3.png");
     background-position: bottom;
@@ -696,12 +661,12 @@ footer a {
     justify-content: left;
   }
 
-  .header-content h1 {
-    font-size: 9vmin;
-  }
-
   .content {
     max-width: 100vw;
+  }
+
+  .header-content {
+    margin-bottom: 150px;
   }
 
   .subtitle {
@@ -755,11 +720,22 @@ footer a {
 @media (min-width: 1281px) {
   #landing-content1 {
     position: absolute;
-    right: 205px;
-    bottom: 450px;
+    left: 60%;
+    bottom: 40%;
+  }
+  #landing-content2 {
+    position: absolute;
+    left: 10%;
+    top: 135%;
+  }
+  #landing-content3 {
+    position: absolute;
+    left: 15%;
+    top: 236%;
   }
 
   #landing-p {
     max-width: fit-content;
+    padding-top: 10px;
   }
 }
