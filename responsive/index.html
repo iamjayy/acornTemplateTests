@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -23,23 +24,25 @@
     <!--NAV BAR END -->
 
     <!--LANDING PAGE & THREE HEROS-->
-    <div class="landing">
-      <div class="hero1">
-        <div class="header-content" id="landing-content1">
-          <h1 class="first-font">Stay Safe. Stay Secure.</h1>
-          <h7>Stay in control with StairSafe from Acorn Stairlifts</h7>
-          <div>
-            <p id="landing-p">
-              Acorn is proud to launch the ground-breaking StairSafe monitoring
-              system for your Acorn stairlift. Simply put, this one-of-a-kind
-              app will monitor the activity of your stairlift and allow you
-              peace of mind as you or a loved one uses the stairlift.
-            </p>
-          </div>
-
-          <div class="landing-buttons">
-            <a href="#" class="btn">get started</a>
-            <a href="#" class="learn-more">Learn More</a>
+    <article>
+      <div class="landing">
+        <div class="hero1">
+          <div class="header-content" id="landing-content1">
+            <h1 class="first-font">Stay Safe. Stay Secure.</h1>
+            <h7>Stay in control with StairSafe from Acorn Stairlifts</h7>
+            <div>
+              <p id="landing-p">
+                Acorn is proud to launch the ground-breaking StairSafe
+                monitoring system for your Acorn stairlift. Simply put, this
+                one-of-a-kind app will monitor the activity of your stairlift
+                and allow you peace of mind as you or a loved one uses the
+                stairlift.
+              </p>
+            </div>
+            <div class="landing-buttons">
+              <a href="#" class="btn">get started</a>
+              <a href="#" class="learn-more">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -79,7 +82,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </article>
 
     <article id="content">
       <section class="safety">
@@ -331,5 +334,9 @@
     </footer>
 
     <script src="./index.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
