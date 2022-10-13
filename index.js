@@ -1,29 +1,22 @@
-window.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
-  header.classList.toggle("sticky", window.scrollY > 3500);
-});
+const one = document.getElementById("one");
+const two = document.getElementById("two");
+const cover = document.getElementById("cover");
+const filling = document.getElementById("filling");
 
-$(window).on("load", function () {
-  $(window)
-    .scroll(function () {
-      var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-      $(".fade").each(function () {
-        /* Check the location of each desired element */
-        var objectBottom = $(this).offset().top + $(this).outerHeight();
+window.addEventListener("scroll", () => {
+  let scrollY = window.scrollY;
+  let bottomHeight = window.innerHeight;
 
-        /* If the element is completely within bounds of the window, fade it in */
-        if (objectBottom < windowBottom) {
-          //object comes into view (scrolling down)
-          if ($(this).css("opacity") == 0) {
-            $(this).fadeTo(500, 1);
-          }
-        } else {
-          //object goes out of view (scrolling up)
-          if ($(this).css("opacity") == 1) {
-            $(this).fadeTo(500, 0);
-          }
-        }
-      });
-    })
-    .scroll(); //invoke scroll-handler on page-load
+  if (scrollY / bottomHeight <= 1) {
+    one.style.opacity = 1 - scrollY / bottomHeight;
+    cover.style.position = "fixed";
+    filling.style.display = "none";
+  } else if (scrollY / bottomHeight < 1) {
+    two.style.opacity = 1 - scrollY / bottomHeight;
+    cover.style.position = null;
+    filling.style.display = "block";
+  } else {
+    cover.style.position = null;
+    filling.style.display = "block";
+  }
 });
