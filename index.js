@@ -1,22 +1,10 @@
-const one = document.getElementById("one");
-const two = document.getElementById("two");
-const cover = document.getElementById("cover");
-const filling = document.getElementById("filling");
+$(document).ready(function () {
+  /* Slide variable */
+  var slideIndexBis = 1;
+  var sliding = false;
 
-window.addEventListener("scroll", () => {
-  let scrollY = window.scrollY;
-  let bottomHeight = window.innerHeight;
-
-  if (scrollY / bottomHeight <= 1) {
-    one.style.opacity = 1 - scrollY / bottomHeight;
-    cover.style.position = "fixed";
-    filling.style.display = "none";
-  } else if (scrollY / bottomHeight < 1) {
-    two.style.opacity = 1 - scrollY / bottomHeight;
-    cover.style.position = null;
-    filling.style.display = "block";
-  } else {
-    cover.style.position = null;
-    filling.style.display = "block";
-  }
+  $("#fullpage").fullpage({
+    anchors: ["page1", "page2", "page3", "page4"],
+    sectionsColor: ["#00B0FF", "#00C853", "#FF1744", "#6200ea"],
+  });
 });
