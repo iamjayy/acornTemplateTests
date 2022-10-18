@@ -1,0 +1,33 @@
+/* nav bar */
+nav .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.nav-links {
+  padding-right: 250px;
+}
+
+#hero {
+  justify-content: center;
+  text-align: center;
+}
+
+.contentTitle {
+  justify-content: center;
+  text-align: center;
+}
+
+#vacanciesButton {
+  background-color: #fff;
+  color: black;
+}
