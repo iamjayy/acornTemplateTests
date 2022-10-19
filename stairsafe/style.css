@@ -191,7 +191,6 @@ ul {
   display: -ms-flexbox;
   display: flex;
 }
-/* ARROW */
 
 /* navbar */
 header {
@@ -563,6 +562,10 @@ footer a {
     position: absolute;
   }
 
+  .safety {
+    display: contents;
+  }
+
   .info {
     grid-template-columns: 1fr;
     row-gap: 1rem;
@@ -628,7 +631,7 @@ footer a {
         rgba(0, 0, 0, 0) 35%,
         rgba(0, 0, 0, 0.9) 100%
       ),
-      url("../assets/images/large/section-1.png");
+      url("../assets/images/StairSafeResponsiveImages/SlideITablet.jpg") !important;
     background-position: bottom;
     background-size: cover;
     display: flex;

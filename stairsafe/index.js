@@ -1,7 +1,11 @@
-// window.addEventListener("scroll", function () {
-//   const header = document.querySelector("header");
-//   header.classList.toggle("sticky", window.scrollY > 3300);
-// });
+window.addEventListener("scroll", function () {
+  const scroll = $(window).scrollTop();
+  const objectSelect = $("#content");
+  const objectPosition = objectSelect.offset().top;
+  const header = document.querySelector("header");
+
+  header.classList.toggle("sticky", scroll > objectPosition);
+});
 
 // const content = document.querySelector(".content");
 // const content2 = document.querySelector(".content2");
