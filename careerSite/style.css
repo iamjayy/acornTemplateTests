@@ -1,14 +1,39 @@
-/* nav bar */
+/* general settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans";
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0 auto;
+}
+
+/* nav bar start */
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
 nav .nav-links {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   list-style: none;
 }
 
 .nav-links li a {
+  font-size: 1.8vmin;
+  color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 1rem;
   display: block;
   transition: all 0.3s ease;
 }
@@ -17,17 +42,307 @@ nav .nav-links {
   padding-right: 250px;
 }
 
-#hero {
-  justify-content: center;
-  text-align: center;
+#greenVacancies {
+  background-color: #408b1d;
+  margin-top: 20px;
+  padding: 5px 48px;
+  transition: 250ms;
+  color: white;
+  border-radius: 20px;
 }
 
-.contentTitle {
-  justify-content: center;
-  text-align: center;
+#logo {
+  padding-left: 200px;
 }
 
-#vacanciesButton {
-  background-color: #fff;
+/* nav bar end */
+
+/* hero start */
+.vacanciesButton {
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 250ms;
+  background: white;
+  color: white;
+  cursor: pointer;
+  width: 250px;
+  height: 50px;
+  border-radius: 20px;
   color: black;
+  margin-right: 25px;
+}
+.apprenticeshipsButton {
+  margin-top: 20px;
+  padding: 5px 48px;
+  transition: 250ms;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.hero {
+  background: url("./assets/images/Home/Hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1000px;
+}
+.heroTitle {
+  text-align: center;
+  position: absolute;
+  top: 22%;
+  left: 34%;
+  max-width: 876px;
+}
+
+.heroTitle h1 {
+  font-weight: 700;
+  font-size: 4vmin;
+  line-height: 100px;
+  color: #ffffff;
+}
+/* hero end */
+
+/* main content */
+.container {
+  max-width: 1440px;
+}
+.contentTitle h1 {
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 70px;
+  font-size: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#investContext {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+  opacity: 0.85;
+}
+
+#invest {
+  text-align: left;
+}
+
+.investTitle {
+  font-size: 24px;
+  font-weight: 550;
+  line-height: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#investContext {
+  font-size: 19px;
+  line-height: 32px;
+  text-align: left;
+}
+
+.rewardsButton {
+  margin-top: 20px;
+  padding: 5px 48px;
+  transition: 250ms;
+  background: #8e003e;
+  border: 2px solid white;
+  color: white;
+  width: 230px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.subtitle {
+  font-size: 24px;
+}
+
+#bulletItems {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  opacity: 0.85;
+}
+
+/* map */
+#globe {
+  background-color: #e6e6e6;
+  height: 780px;
+  width: 100vw;
+  background-image: url("./assets/images/Home/map.png");
+}
+
+#quica {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.globeButtons {
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+}
+
+.table {
+  display: table; /* Allow the centering to work */
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+ul#horizontal-list {
+  list-style: none;
+  padding-top: 20px;
+}
+ul#horizontal-list li {
+  display: inline;
+  padding-right: 50px;
+}
+
+#buttonQ {
+  color: #1d1d1c;
+  background-color: #408b1d;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 98px;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+#buttonU {
+  color: #1d1d1c;
+  background-color: #f59b55;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 98px;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+#buttonI {
+  color: #1d1d1c;
+  background-color: #576da8;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 98px;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+#buttonC {
+  color: #1d1d1c;
+  background-color: #ee3da6;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 98px;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+#buttonA {
+  color: #1d1d1c;
+  background-color: #db575d;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 98px;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.quality::after {
+  content: "";
+  display: block;
+  margin: -9px auto;
+  width: 2%;
+  padding-top: 20px;
+  border-bottom: 3px solid #6dc074;
+}
+
+.unity::after {
+  content: "";
+  display: block;
+  margin: -9px auto;
+  width: 2%;
+  padding-top: 20px;
+  border-bottom: 3px solid #f59b55;
+}
+
+.integrity::after {
+  content: "";
+  display: block;
+  margin: -9px auto;
+  width: 2%;
+  padding-top: 20px;
+  border-bottom: 3px solid #f59b55;
+}
+
+.care::after {
+  content: "";
+  display: block;
+  margin: -9px auto;
+  width: 2%;
+  padding-top: 20px;
+  border-bottom: 3px solid #ee3da6;
+}
+
+.ambition::after {
+  content: "";
+  display: block;
+  margin: -9px auto;
+  width: 2%;
+  padding-top: 20px;
+  border-bottom: 3px solid#DB575D;
+}
+
+.hoverP {
+  padding-top: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.hoverQuality {
+  display: none;
+}
+
+.hoverUnity {
+  display: none;
+}
+
+.hoverIntegrity {
+  display: none;
+}
+.hoverCare {
+  display: none;
+}
+
+.hoverAmbition {
+  display: none;
+}
+
+/* flags */
+#flags div ul li {
+  list-style: none;
+}
+
+#flagNames {
+  padding-top: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+}
+
+/* flags */
+.reviewStars {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
